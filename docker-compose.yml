@@ -1,0 +1,15 @@
+services:
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=eitanmd
+      - MYSQL_USER=eitan
+      - MYSQL_PASSWORD=eitan1234
+      - MYSQL_ROOT_PASSWORD=1234eitan
+    ports:
+      - '3306:3306'
+    volumes:
+      - data_mysql:/var/lib/mysql
+volumes:
+  data_mysql:
